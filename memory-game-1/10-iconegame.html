@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="10-icongame.css">
+    <title>Icon Game</title>
+</head>
+
+<body>
+    <nav class="nav-pages">
+        <a href="../index.html">game 1</a>
+        <a href="./memory-game-1/10-iconegame.html">game 2</a>
+    </nav>
+    <style>
+        .nav-pages {
+            text-align: center;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .nav-pages a {
+            background-color: rgb(44, 128, 238);
+            padding: 5px;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+    </style>
+    <div class="winer">
+        <span>You Are Win</span>
+        <span>You'r Foul: <span id="foul"></span></span>
+        <button>Try Agine</button>
+    </div>
+    <div class="control-buttons">
+        <span>Start Game</span>
+    </div>
+    <div class="timer">0
+        <span class="m">1</span>:
+        <span class="s">59</span>
+    </div>
+    <header class="info-container">
+        <div class="name">
+            Hello: <span class="span1"></span>
+        </div>
+
+        <div class="tries">
+            score: <span class="span2">0</span>
+        </div>
+    </header>
+
+    <div class="memory-game-blocks">
+        <div class="game-block" data-tk="python">
+            <div class="face face front"></div>
+            <div class="face face back">
+                <img src="./img/python.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/python.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="c#">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/csh.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="c#">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/csh.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="c++">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/c++.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="c++">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/c++.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="java">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/java.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="java">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/java.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/js.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/js.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="ruby">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/ruby.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="ruby">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/ruby.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/html.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/html.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/css.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/css.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="swift">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/swift.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="swift">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/swift.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="visual">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/Visual.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-tk="visual">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./img/Visual.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="loser">
+        <span>You Are Lose</span>
+        <button>Try Agine</button>
+    </div>
+
+    <audio id="fail" src="audio/fail.mp3" preload="auto"></audio>
+    <audio id="success" src="audio/success.mp3" preload="auto"></audio>
+    <audio id="click" src="audio/click.mp3" preload="auto"></audio>
+    <audio id="win" src="audio/win.mp3" preload="auto"></audio>
+    <audio id="loser" src="audio/loser.mp3" preload="auto"></audio>
+
+    <script src="10-icongame.js"></script>
+</body>
+
+</html>

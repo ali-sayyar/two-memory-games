@@ -1,0 +1,153 @@
+:root {
+  --blue: #0075ff;
+  --blue-alt: #0d69d5;
+  --orange: #f59e0b;
+  --green: #22c55e;
+  --red: #f44336;
+  --grey: #888;
+  --yellow: #eaff07;
+  --yellow2: #c6d218;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt);
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+*:focus {
+  outline: none;
+}
+/*  */
+body {
+  background-color: #f1f5f9;
+}
+
+.start,
+.finsh {
+  background-color: #7a60607a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+
+.finsh {
+  font-size: 30px;
+  color: var(--blue);
+  padding: 100px;
+  text-align: center;
+  background-color: #888888f5;
+}
+
+.start span {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  background-color: var(--red);
+  padding: 10px 20px;
+  border-radius: 17px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.head {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: auto;
+}
+
+.box {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  margin: 3px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+.box i {
+  transform: rotateY(180deg);
+}
+.box i,
+.box div {
+  background-color: rgba(204, 204, 221, 0.759);
+  font-size: 70px;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.box i.fa-php,
+.box i.fa-language {
+  font-size: 55px;
+}
+.box div {
+  background-color: #ddd;
+}
+@media (max-width: 767px) {
+  .boxes {
+    width: 100%;
+  }
+}
+
+.r-180,
+.ac {
+  transform: rotatey(-180deg);
+}
+
+.r0 {
+  transform: rotatey(0);
+}
+.no-click {
+  pointer-events: none;
+}
